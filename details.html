@@ -1,0 +1,41 @@
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Détails de la recette</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-800">
+        <header class="bg-gray-900 p-4 mb-4">
+            <nav class="max-w-5xl mx-auto">
+                <div class="mx-auto flex justify-between items-center">
+                    <h1 class="text-white text-xl">Détails de la recette</h1>
+                    <button
+                        id="modifyBtn"
+                        type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Modifier
+                    </button>
+                    <button
+                        id="deleteBtn"
+                        type="button"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Supprimer
+                    </button>
+                    <button
+                        id="backHome"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Retour à l'accueil
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main class="max-w-4xl mx-auto p-4" id="recipeDetails"></main>
+
+        <script src="details-script.js"></script>
+    </body>
+</html>

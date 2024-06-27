@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gestion Admin</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-800">
+        <header class="bg-gray-900 p-4 mb-4">
+            <nav class="max-w-2xl mx-auto">
+                <div class="mx-auto flex justify-between items-center">
+                    <h1 class="text-white text-xl">Ajouter une recette</h1>
+                    <button
+                        id="backHome"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Retour à l'accueil
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <main class="max-w-md mx-auto">
+            <form id="addRecipeForm">
+                <div class="mb-5 flex flex-col text-white">
+                    <label for="addCategory">Catégorie</label>
+                    <select
+                        id="categorySelect"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg p-2.5"
+                        required
+                    >
+                        <option value=""></option>
+                        <option value="Plat">Plat</option>
+                        <option value="Entrée">Entrée</option>
+                        <option value="Dessert">Dessert</option>
+                    </select>
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addTitle">Titre de la recette</label>
+                    <input
+                        id="addTitle"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                        required
+                    />
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addIngredientsList"
+                        >Liste des ingrédients</label
+                    >
+                    <ul id="addIngredientsList">
+                        <li
+                            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                        >
+                            <input
+                                type="text"
+                                placeholder="Ingrédient"
+                                required
+                            />
+                            <input
+                                type="text"
+                                placeholder="Quantité"
+                                required
+                            />
+                        </li>
+                    </ul>
+                    <button
+                        type="button"
+                        id="addIngredientBtn"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Ajouter Ingrédient
+                    </button>
+                    <button
+                        type="button"
+                        id="deleteIngredientBtn"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Supprimer
+                    </button>
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addStep">Étape de préparation</label>
+                    <ul id="addStep">
+                        <li>
+                            <textarea
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                                required
+                            ></textarea>
+                        </li>
+                    </ul>
+                    <button
+                        type="button"
+                        id="addStepBtn"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Ajouter une étape
+                    </button>
+                    <button
+                        type="button"
+                        id="deleteStep"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Supprimer
+                    </button>
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addTime">Temps de préparation</label>
+                    <input
+                        id="addTime"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                        required
+                    />
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addCookingTime">Temps de cuisson</label>
+                    <input
+                        id="addCookingTime"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                    />
+                </div>
+                <div class="mb-5 text-white">
+                    <label for="addPhoto">Photo</label>
+                    <input
+                        id="addPhoto"
+                        type="text"
+                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5"
+                        required
+                    />
+                </div>
+                <button
+                    id="formSubmit"
+                    type="submit"
+                    class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2"
+                >
+                    Ajouter Recette
+                </button>
+            </form>
+        </main>
+        <script src="admin-script.js"></script>
+    </body>
+</html>

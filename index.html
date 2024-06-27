@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gestionnaire de recettes de cuisines</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-800">
+        <header class="bg-gray-900 p-4 mb-4">
+            <nav class="max-w-5xl mx-auto">
+                <div class="mx-auto flex justify-between items-center">
+                    <h1 class="text-white text-2xl">
+                        Gestionnaire de recettes de cuisines
+                    </h1>
+                    <button
+                        id="addRecipeBtn"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Ajouter une recette
+                    </button>
+                    <button
+                        id="logOut"
+                        class="text-white bg-blue-700 hover:bg-blue-600 font-medium rounded-lg text-sm px-5 py-2.5 me-2 my-2"
+                    >
+                        Deconnexion
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div
+            id="searchBar"
+            class="flex mb-4 md:max-w-2xl sm:max-w-xl max-w-sm mx-auto"
+        >
+            <input
+                type="text"
+                id="search"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-l-lg block w-full p-2.5"
+                placeholder="Rechercher une recette..."
+            />
+            <select
+                id="categorySelect"
+                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-r-lg p-2.5"
+            >
+                <option value="">Toutes les catégories</option>
+                <option value="Plat">Plat</option>
+                <option value="Entrée">Entrée</option>
+                <option value="Dessert">Dessert</option>
+            </select>
+        </div>
+
+        <main class="max-w-4xl mx-auto">
+            <div
+                id="recipesList"
+                class="p-4 grid grid-cols-2 md:grid-cols-3 gap-4"
+            ></div>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
